@@ -18,52 +18,49 @@
 
 <body>
     <div class="header_shapka">
-        <a href="index.php" class="header_logo">Sciberium</a>
+        <a href="index.php" class="header_logo" style="border-bottom: 1px solid white;">Sciberium</a>
         <div class="header_items">
             <div class="header_item">
-                <a href="">Язык</a>
-            </div>
-            <div class="header_item">
-                <a href="">Форум</a>
+                <a href="" style="color: white;">Язык</a>
             </div>
             <div class="header_item">
                 <div class="products_menu_btn">
-                    <a href="catalog.php">Продукты</a>
+                    <a href="catalog.php" style="border-bottom: 1px solid white; color: white;">Продукты</a>
                     <div class="products_menu"></div>
                     <div class="products_menu_box">
                         <div class="products_menu_num">
                             <img src="" alt="">
-                            <a href="products/Viewer.php">Sciberia Viewer</a>
+                            <a href="products/Viewer.php" style="color: black;">Sciberia Viewer</a>
                         </div>
                         <div class="products_menu_num">
                             <img src="" alt="">
-                            <a href="products/PACS.php">Sciberia PACS</a>
+                            <a href="products/PACS.php" style="color: black;">Sciberia PACS</a>
                         </div>
                         <div class="products_menu_num">
                             <img src="" alt="">
-                            <a href="products/Lungs.php">Sciberia Lungs</a>
+                            <a href="products/Lungs.php" style="color: black;">Sciberia Lungs</a>
                         </div>
                         <div class="products_menu_num">
                             <img src="" alt="">
-                            <a href="products/Head.php">Sciberia Head</a>
+                            <a href="products/Head.php" style="color: black;">Sciberia Head</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="header_item">
-                <a href="">О нас</a>
+                <a href="" style="color: white;">О нас</a>
             </div>
             <div class="header_item">
-                <a href="">Новости</a>
-            </div>
-            <div class="avatar-btn">
-                <img src="img/avatar.png" alt="" height="55px">
-                <div class="avatar_name"><?php if (!isset($_SESSION)) {
-                                                session_start();
-                                            }
-                                            echo $_SESSION['user'] ?></div>
+                <a href="" style="color: white;">Новости</a>
             </div>
         </div>
+        <a href="register.php" class="avatar-btn">
+            <div class="avatar_name"><?php if (!isset($_SESSION)) {
+                                            session_start();
+                                        }
+                                        echo $_SESSION['user'] ?></div>
+            <img src="img/avatar.png" alt="" height="55px">
+        </a>
     </div>
 
     <article class="window" id="profile_id">

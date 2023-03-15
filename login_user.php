@@ -1,9 +1,9 @@
 <?php  
     $conn = new PDO("mysql:host=localhost;dbname=mysql", "root", "");
-	$sql = "SELECT * FROM  `users` WHERE login=:login AND password=:password";
+	$sql = "SELECT * FROM  `users` WHERE email=:email AND password=:password";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bindValue(":login", $_POST["login"]);
+    $stmt->bindValue(":email", $_POST["email"]);
     $stmt->bindValue(":password", $_POST['password']);
     $stmt->execute();
 	$stmt = $stmt->fetchAll();
@@ -15,9 +15,8 @@
     	}
 		$_SESSION['user'] = $stmt['0']['name'];
 		$_SESSION['email'] = $stmt['0']['email'];
-		$_SESSION['login'] = $stmt['0']['login'];
 		$_SESSION['pass'] = $stmt['0']['password'];
-		$_SESSION['prof'] = $stmt['0']['prof'];
+		$_SESSION['phone'] = $stmt['0']['phone'];
 		// echo '<meta charset="UTF-8">Вы успешно авторизовались!'; 
 		require_once('index.php');
 	} else { 
@@ -26,7 +25,7 @@
     	}
 		$_SESSION['user'] = 'Гость';
 		// echo '<meta charset="UTF-8">Логин или пароль не верный или пользователь не существует'; 
-		require_once('index.php');
+		require_once('register.php');
 	}
 		
 ?>
