@@ -1,0 +1,167 @@
+* {
+
+    /* border: 1px solid red; */
+    font-family: 'NunitoSans', sans-serif;
+    color: #314968;
+
+}
+
+body {
+
+    background-color: white;
+
+}
+
+.head {
+
+    height: 80px;
+
+}
+
+.product {
+
+    display: flex;
+    justify-content: center;
+    padding: 40px 200px;
+
+}
+
+.product_host {
+
+    margin: 0px 150px;
+
+}
+
+.product_name {
+
+    font-size: 40px;
+
+}
+
+.product_desc {
+
+    font-size: 22px;
+
+}
+
+.product_ninja {
+
+    font-size: 20px;
+    background-color: #e3ebf600;
+    border-radius: 10px;
+    padding: 10px 50px 10px 10px;
+    height: 20px;
+    margin-bottom: 10px;
+    transition: 0.3s ease-in-out;
+
+}
+
+.product_ninja.active {
+
+    background-color: #e3ebf6;
+    height: auto;
+
+}
+
+.product_ninja_title {
+
+    cursor: pointer;
+    width: fit-content;
+
+}
+
+.product_ninja_text {
+
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.product_ninja_text.active {
+
+    opacity: 1;
+    pointer-events: auto;
+
+}
+
+.product_moreinf {
+
+    background-color: #fff;
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    border: .5px solid #314968;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    transition: all .5s ease-in-out;
+
+}
+
+.product_moreinf a {
+
+    text-decoration: none;
+    color: #314968;
+    font-weight: 400;
+
+}
+
+.product_moreinf:hover {
+
+    background-color: #e3ebf6;
+
+}
+
+.table {
+
+    border: 1px solid #314968;
+    width: 1200px;
+    height: fit-content;
+    border-spacing: 0;
+    border-collapse: separate;
+    color: #314968;
+    font-size: 14px;
+    min-height: 180px;
+    border-radius: 10px;
+
+}
+
+.table td {
+    height: 40px;
+    text-align: center;
+}
+
+.table td:first-child {
+    text-align: center;
+    min-width: 40px !important;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+    height: 100%;
+}
+
+.table img {
+    width: 25px;
+    height: 25px;
+}
+
+.table_head {
+
+    text-align: center;
+    background-color: #e3ebf6;
+    height: 60px;
+
+}
+
+.table tr:last-child td {
+
+    border-top: 1px solid #314968;
+
+}

@@ -1,0 +1,64 @@
+* {
+
+    /* border: 1px solid red; */
+    font-family: 'NunitoSans', sans-serif;
+
+}
+
+body {
+
+    background-color: white;
+
+}
+
+.products {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.product {
+
+    display: flex;
+    padding: 20px 20px;
+    margin: 20px 20px;
+    max-width: 45%;
+
+}
+
+.product_host {
+
+    margin-left: 50px;
+
+}
+
+.product_name {
+
+    font-size: 32px;
+
+}
+
+.product_desc {
+
+    font-size: 20px;
+
+}
+
+.product_moreinf {
+
+    font-size: 14px;
+    border: 1px solid #314968;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 40px;
+    transition: all .5s ease-in-out;
+
+}
+.product_moreinf:hover {
+
+    background-color: #fff;
+
+}
