@@ -49,9 +49,9 @@
             </div>
             <div class="header_item">
                 <div class="products_menu_btn">
-                    <a href="catalog.php" style="color: white;">Новости</a>
-                    <div class="products_menu" style="left: 1020px"></div>
-                    <div class="products_menu_box" style="left: 1020px">
+                    <a href="" style="color: white;">Новости</a>
+                    <div class="products_menu" style="left: 990px"></div>
+                    <div class="products_menu_box" style="left: 990px">
                         <a href="https://sciberia.io/news" class="products_menu_num" style="height: 26%;">
                             <img src="" alt="">
                             <div style="color: black;">All</div>

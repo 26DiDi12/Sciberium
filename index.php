@@ -50,9 +50,9 @@
             </div>
             <div class="header_item">
                 <div class="products_menu_btn">
-                    <a href="catalog.php" style="color: white;">Новости</a>
-                    <div class="products_menu" style="left: 1020px"></div>
-                    <div class="products_menu_box" style="left: 1020px">
+                    <a href="" style="color: white;">Новости</a>
+                    <div class="products_menu" style="left: 990px"></div>
+                    <div class="products_menu_box" style="left: 990px">
                         <a href="https://sciberia.io/news" class="products_menu_num" style="height: 26%;">
                             <img src="" alt="">
                             <div style="color: black;">All</div>
@@ -75,16 +75,16 @@
         }
         if (isset($_SESSION['user'])) if ($_SESSION['user'] != 'Гость') { ?>
             <a href="profile.php" class="avatar-btn">
-                <div class="avatar_name"><?php
+                <div class="avatar_name"><p><?php
                                             echo $_SESSION['user'];
-                                            ?></div>
-                <img src="img/avatar.png" alt="" height="55px">
+                                            ?></p></div>
+                <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
             </a>
         <?php } else { ?>
             <a href="register.php" class="avatar-btn">
-                <div class="avatar_name"><?php
-                                            echo $_SESSION['user']; ?></div>
-                <img src="img/avatar.png" alt="" height="55px">
+                <div class="avatar_name"><p><?php
+                                            echo $_SESSION['user']; ?></p></div>
+                <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
             </a>
         <?php } ?>
 

@@ -57,7 +57,7 @@ body {
     border-radius: 20px;
     background-color: rgb(59, 59, 59);
     top: 69px;
-    left: 830px;
+    left: 800px;
     height: 200px;
     width: 200px;
     position: absolute;
@@ -73,7 +73,7 @@ body {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     top: 85px;
-    left: 830px;
+    left: 800px;
     height: 200px;
     width: 200px;
     position: absolute;
@@ -206,6 +206,7 @@ body {
     transition: 0.3s ease-in-out;
 
 }
+
 #register-title.active {
 
     opacity: 0;
@@ -388,6 +389,8 @@ body {
 
 .avatar-btn {
 
+    min-width: 161px;
+    max-width: 161px;
     text-decoration: none;
     cursor: pointer;
     display: flex;
@@ -396,11 +399,19 @@ body {
 
 }
 
+.avatar_img {
+
+    position: absolute;
+    left: 1815px;
+
+}
+
 .avatar_name {
 
     color: white;
     cursor: pointer;
     margin-right: 20px;
+    text-align:right;
 
 }
 
@@ -676,6 +687,7 @@ body {
     display: flex;
 
 }
+
 .profiles_avatar {
 
     box-sizing: border-box;
@@ -685,6 +697,7 @@ body {
     height: 500px;
 
 }
+
 .profiles_info {
 
     min-width: 80%;
@@ -706,7 +719,7 @@ body {
     background-size: cover;
     height: 900px;
     border-bottom: 22px solid #009A99;
-    
+
 }
 
 .background_items {
@@ -733,6 +746,7 @@ body {
     pointer-events: none;
 
 }
+
 .login_box.active {
 
     opacity: 1;
@@ -757,12 +771,14 @@ body {
     pointer-events: auto;
 
 }
+
 .register_box.active {
 
     width: 1365px;
     left: 406px;
 
 }
+
 .register_box.hell {
 
     opacity: 0;
@@ -789,6 +805,7 @@ body {
     pointer-events: auto;
 
 }
+
 .register_btn.active {
 
     opacity: 0;
@@ -797,14 +814,15 @@ body {
 }
 
 #register_btn_num4 {
-    
+
     opacity: 1;
     pointer-events: auto;
     transition: 0.3s ease-in-out;
 
 }
+
 #register_btn_num4.active {
-    
+
     opacity: 0;
     pointer-events: none;
 
@@ -818,9 +836,11 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.7s ease-in-out;
-    min-width: 300px; max-width: 300px;
+    min-width: 300px;
+    max-width: 300px;
 
 }
+
 .register_step_two.active {
 
     opacity: 1;
