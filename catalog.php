@@ -18,7 +18,7 @@
 
 <body>
     <div class="header_shapka">
-        <a href="index.php" class="header_logo" style="border-bottom: 1px solid white;">Sciberium</a>
+        <a href="index.php" class="header_logo">Sciberium</a>
         <div class="header_items">
             <div class="header_item">
                 <a href="" style="color: white;">Язык</a>
@@ -54,13 +54,22 @@
                 <a href="" style="color: white;">Новости</a>
             </div>
         </div>
-        <a href="register.php" class="avatar-btn">
-            <div class="avatar_name"><?php if (!isset($_SESSION)) {
+        <?php session_start();
+        if (isset($_SESSION['user'])) { ?>
+            <a href="profile.php" class="avatar-btn">
+                <div class="avatar_name"><?php
+                                            echo $_SESSION['user'];
+                                            ?></div>
+                <img src="img/avatar.png" alt="" height="55px">
+            </a>
+        <?php } else { ?>
+            <a href="register.php" class="avatar-btn">
+                <div class="avatar_name"><?php
                                             session_start();
-                                        }
-                                        echo $_SESSION['user'] ?></div>
-            <img src="img/avatar.png" alt="" height="55px">
-        </a>
+                                            echo $_SESSION['user']; ?></div>
+                <img src="img/avatar.png" alt="" height="55px">
+            </a>
+        <?php } ?>
     </div>
 
     <article class="window" id="profile_id">

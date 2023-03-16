@@ -53,18 +53,18 @@
             </div>
         </div>
 
-        <?php if (isset($_SESSION['user']) == 'Гость') { ?>
-            <a href="register.php" class="avatar-btn">
-                <div class="avatar_name"><?php if (!isset($_SESSION)) {
-                                                session_start();
-                                            } ?></div>
+        <?php session_start();
+        if (isset($_SESSION['user'])) { ?>
+            <a href="profile.php" class="avatar-btn">
+                <div class="avatar_name"><?php
+                                            echo $_SESSION['user'];
+                                            ?></div>
                 <img src="img/avatar.png" alt="" height="55px">
             </a>
         <?php } else { ?>
-            <a href="index.php" class="avatar-btn">
-                <div class="avatar_name"><?php if (!isset($_SESSION)) {
-                                                session_start();
-                                            }
+            <a href="register.php" class="avatar-btn">
+                <div class="avatar_name"><?php
+                                            session_start();
                                             echo $_SESSION['user']; ?></div>
                 <img src="img/avatar.png" alt="" height="55px">
             </a>

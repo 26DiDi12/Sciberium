@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/NunitoSans.css">
-    <script src="js/script.js" defer></script>
+    <script src="js/script_regist.js" defer></script>
     <script src="js/jquery-3.6.4.min.js"></script>
 </head>
 
@@ -53,17 +53,18 @@
             </div>
         </div>
 
-        <?php if (!isset($_SESSION)) { ?>
-            <a href="register.php" class="avatar-btn">
-                <div class="avatar_name"><?php session_start();
-                                            echo $_SESSION['user'] = 'Гость'; ?></div>
+        <?php session_start();
+        if (isset($_SESSION['user'])) { ?>
+            <a href="profile.php" class="avatar-btn">
+                <div class="avatar_name"><?php
+                                            echo $_SESSION['user'];
+                                            ?></div>
                 <img src="img/avatar.png" alt="" height="55px">
             </a>
         <?php } else { ?>
-            <a href="index.php" class="avatar-btn">
-                <div class="avatar_name"><?php if (!isset($_SESSION)) {
-                                                session_start();
-                                            }
+            <a href="register.php" class="avatar-btn">
+                <div class="avatar_name"><?php
+                                            session_start();
                                             echo $_SESSION['user']; ?></div>
                 <img src="img/avatar.png" alt="" height="55px">
             </a>
@@ -78,7 +79,6 @@
     <div class="head"></div>
     <div class="background" style="background-image: url('/img/background3.png');">
         <div class="background_items_second">
-            <div style="font-size:36px;">Ваш личный кабинет</div>
             <div class="register_zone">
                 <form action="sign_user.php" class="register_box" method="POST">
                     <p id="register-title" style="font-size: 32px;">Регистрация</p>
@@ -104,14 +104,14 @@
 
                 <form action="login_user.php" class="login_box" method="POST">
                     <p id="login-title" style="font-size: 32px;">Войти</p>
-                        <p><input name="name" maxlength=50 size=50 type="text" class="form-input" placeholder="Введите ФИО"></p>
-                        <p><input name="email" maxlength=20 size=20 type="text" class="form-input" placeholder="Введите почту"></p>
-                        <p><input name="phone" maxlength=11 size=11 type="text" class="form-input" placeholder="Введите телефон"></p>
-                        <p><input name="password" maxlength=20 size=20 type="text" class="form-input" placeholder="Введите пароль"></p>
-                        <p><button type="submit" class="form-btn">Войти</button></p>
-                        <p>
-                        <div id="login_btn_num6" class="login_btn">Нет аккаунта? (Зарегаться)</div>
-                        </p>
+                    <p><input name="name" maxlength=50 size=50 type="text" class="form-input" placeholder="Введите ФИО"></p>
+                    <p><input name="email" maxlength=20 size=20 type="text" class="form-input" placeholder="Введите почту"></p>
+                    <p><input name="phone" maxlength=11 size=11 type="text" class="form-input" placeholder="Введите телефон"></p>
+                    <p><input name="password" maxlength=20 size=20 type="text" class="form-input" placeholder="Введите пароль"></p>
+                    <p><button type="submit" class="form-btn">Войти</button></p>
+                    <p>
+                    <div id="login_btn_num6" class="login_btn">Нет аккаунта? (Зарегаться)</div>
+                    </p>
                 </form>
             </div>
         </div>
