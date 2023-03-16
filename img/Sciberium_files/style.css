@@ -408,9 +408,9 @@ body {
 
 .avatar_name {
 
-    min-width: 100px;
-    max-width: 100px;
-    left: 1690px;
+    min-width: 161px;
+    max-width: 161px;
+    left: 1635px;
     position: absolute;
     color: white;
     cursor: pointer;
