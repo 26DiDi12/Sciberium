@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/NunitoSans.css">
+    <script src="js/script_profile.js" defer></script>
     <script src="js/jquery-3.6.4.min.js"></script>
 </head>
 
@@ -74,15 +75,22 @@
         }
         if (isset($_SESSION['user'])) if ($_SESSION['user'] != 'Гость') { ?>
             <a href="profile.php" class="avatar-btn">
-                <div class="avatar_name"><p><?php
-                                            echo $_SESSION['user'];
-                                            ?></p></div>
+                <div class="avatar_name">
+                    <p><?php
+                        echo $_SESSION['user'];
+                        ?></p>
+                </div>
                 <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
             </a>
+                <form action="leave_user.php" style="position: absolute; top: 10px; left: 1812px;" method="POST">
+                    <button type="submit">Выйти</button>
+                </form>
         <?php } else { ?>
             <a href="register.php" class="avatar-btn">
-                <div class="avatar_name"><p><?php
-                                            echo $_SESSION['user']; ?></p></div>
+                <div class="avatar_name">
+                    <p><?php
+                        echo $_SESSION['user']; ?></p>
+                </div>
                 <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
             </a>
         <?php } ?>
@@ -94,40 +102,39 @@
 <main>
 
     <div class="head"></div>
-    <div class="background" style="background-image: url('/img/background3.png');">
-        <div class="background_items_second">
-
-            <div class="profiles_box">
-                <div class="profiles_avatar"></div>
-                <div class="profiles_info">
-                    <div class="profiles_name" style="text-align: center; font-size:36px;">
-                        <?php
-                        if (!isset($_SESSION['user'])) {
-                            session_start();
-                        }
-                        echo $_SESSION['user']; ?></div>
-                    <div class="profiles_phone" style="margin-left: 60px;">
-                        <p>Ваш телефон - <?php
-                                            if (!isset($_SESSION['user'])) {
-                                                session_start();
-                                            }
-                                            echo $_SESSION['phone']; ?></p>
-                    </div>
-                    <div class="profiles_email" style="margin-left: 60px;">
-                        <p>Ваша почта - <?php
-                                        if (!isset($_SESSION['user'])) {
-                                            session_start();
-                                        }
-                                        echo $_SESSION['email']; ?></p>
-                    </div>
-                    <form action="leave_user.php" style="margin-left: 60px;">
-                        <button type="submit" class="register_btn">Выйти с аккаунта</button>
-                    </form>
-                </div>
-
+    <div class="background_profile">
+        <div class="profile_title">Личный кабинет</div>
+        <div style="position: absolute; width: 1671.01px; height: 0px; left: 124px; top: 271px; border: 2px solid #575757;"></div>
+        <div class="background_items_second_two">
+            <div class="profile_btn">
+                <p class="profile_btn_fin" id="profile_btn_info">Информация</p>
             </div>
-
+            <div class="profile_btn">
+                <p class="profile_btn_fin" id="profile_btn_buy">Покупки</p>
+            </div>
+            <div class="profile_btn">
+                <p class="profile_btn_fin" id="profile_btn_supp">Техническая поддержка</p>
+            </div>
         </div>
+
+        <div class="profile_info">
+            <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p>
+            <p class="profile_info_input"><?php echo $_SESSION['phone'] ?></p>
+            <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p>
+            <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p>
+            <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p>
+        </div>
+
+        <div class="profile_supp">
+            <p class="profile_supp_text">Что вам нужно?</p>
+            <div class="profile_supp_btn_menu">
+                <p class="profile_supp_btn">Вызвать техническую поддержку</p>
+                <p class="profile_supp_btn">Задать вопрос</p>
+            </div>
+        </div>
+        
+        <div style="position: absolute; width: 1541px; height: 0px; left: 189px; top: 850px; border: 2px solid #575757;"></div>
+
     </div>
 
 </main>

@@ -13,7 +13,7 @@ body {
 
 .head {
 
-    height: 110px;
+    height: 111px;
 
 }
 
@@ -858,6 +858,137 @@ body {
     background-image: url('/img/background2.png');
     background-size: cover;
     height: 756px;
+
+}
+
+.background_profile {
+
+    background-color: white;
+
+}
+
+.profile_title {
+
+    text-align: center;
+    margin-top: 92px;
+    font-size: 36px;
+    color: #08457E;
+
+}
+
+.background_items_second_two {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 37px;
+    font-size: 24px;
+    color: #009A99;
+
+}
+.profile_btn {
+
+    display: flex;
+    margin-left: 120px;
+    margin-right: 120px;
+    justify-content: center;
+    width: 300px;
+
+}
+.profile_btn_fin {
+
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    color: #009A99;
+
+}
+.profile_btn_fin:hover {
+
+    color: #08457E;
+
+}
+#profile_btn_buy.active {
+
+    color: #08457E;
+
+}
+#profile_btn_supp.active {
+
+    color: #08457E;
+
+}
+#profile_btn_info.active {
+
+    color: #08457E;
+
+}
+.profile_supp_text {
+
+    min-width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #575757;
+
+}
+.profile_supp_btn_menu {
+
+    display: flex;
+
+}
+.profile_supp_btn {
+
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 150px;
+    margin-right: 150px;
+    min-height: 54px;
+    font-weight: 300;
+    font-size: 24px;
+    color: #575757;
+    min-width: 496px;
+    border: 1px solid #575757;
+}
+.profile_supp {
+
+    left: 150px;
+    top: 600px;
+    position: absolute;
+    width: fit-content;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+
+}
+.profile_supp.active {
+
+    opacity: 1;
+    pointer-events: auto;
+
+}
+.profile_info {
+
+    margin-left: 120px;
+    margin-top: 120px;
+    margin-bottom: 320px;
+    width: 500px;
+    opacity: 0;
+    pointer-events: auto;
+    transition: 0.2s ease-in-out;
+
+}
+.profile_info.active {
+
+    opacity: 1;
+    pointer-events: auto;
+
+}
+.profile_info_input {
+
+    font-size: 24px;
+    border-bottom: 2px solid #575757;;
 
 }
 

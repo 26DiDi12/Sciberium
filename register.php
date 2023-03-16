@@ -121,10 +121,8 @@
                 </form>
 
                 <form action="login_user.php" class="login_box" method="POST">
-                    <p id="login-title" style="font-size: 32px;">Войти</p>
-                    <p><input name="name" maxlength=50 size=50 type="text" class="form-input" placeholder="Введите ФИО"></p>
+                    <p id="login-title" style="font-size: 32px; margin-top: 100px;">Войти</p>
                     <p><input name="email" maxlength=20 size=20 type="text" class="form-input" placeholder="Введите почту"></p>
-                    <p><input name="phone" maxlength=11 size=11 type="text" class="form-input" placeholder="Введите телефон"></p>
                     <p><input name="password" maxlength=20 size=20 type="text" class="form-input" placeholder="Введите пароль"></p>
                     <p><button type="submit" class="form-btn">Войти</button></p>
                     <p>

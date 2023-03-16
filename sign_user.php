@@ -27,7 +27,7 @@ if ($_POST['name'] == '') {
 			$_SESSION['user'] = 'Гость';
 			require_once('register.php');
 		} else {
-			$sql = "INSERT INTO  `users` (`email`, `password`, `name`, `phone`) VALUES (:password, :email, :name, :phone);";
+			$sql = "INSERT INTO  `users` (`password`, `email`, `name`, `phone`) VALUES (:password, :email, :name, :phone);";
 			$stmt = $conn->prepare($sql);
 			$stmt->bindValue(":password", $_POST['password']);
 			$stmt->bindValue(":email", $_POST["email"]);
