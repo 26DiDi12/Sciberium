@@ -6,10 +6,8 @@
 
 	$_SESSION["user"] = 'Гость';
 	unset($_SESSION["pass"]);
-	unset($_SESSION["login"]);
 	unset($_SESSION["email"]);
-	unset($_SESSION["prof"]);
-	// echo '<meta charset="UTF-8">Вы вышли с аккаунта!'; 
+	unset($_SESSION["phone"]);
 	require_once('index.php');
 		
 ?>

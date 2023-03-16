@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/NunitoSans.css">
-    <script src="js/script_regist.js" defer></script>
     <script src="js/jquery-3.6.4.min.js"></script>
 </head>
 
@@ -53,8 +52,10 @@
             </div>
         </div>
 
-        <?php session_start();
-        if (isset($_SESSION['user'])) { ?>
+        <?php if (!isset($_SESSION['user'])) {
+            session_start();
+        }
+        if (isset($_SESSION['user'])) if ($_SESSION['user'] != 'Гость') { ?>
             <a href="profile.php" class="avatar-btn">
                 <div class="avatar_name"><?php
                                             echo $_SESSION['user'];
@@ -64,7 +65,6 @@
         <?php } else { ?>
             <a href="register.php" class="avatar-btn">
                 <div class="avatar_name"><?php
-                                            session_start();
                                             echo $_SESSION['user']; ?></div>
                 <img src="img/avatar.png" alt="" height="55px">
             </a>
@@ -80,27 +80,34 @@
     <div class="background" style="background-image: url('/img/background3.png');">
         <div class="background_items_second">
 
-            <div class="profile_box">
-            <div style="font-size:36px;">Ваш личный кабинет</div>
-                <!-- <p id="register-title" style="font-size: 32px;">Регистрация</p>
-                <div style="margin-top: 120px;">
-                    <div id="register_btn_num1" class="register_btn">Пользователь</div>
-                    <div id="register_btn_num2" class="register_btn">Сотрудник</div>
-                    <div id="register_btn_num3" class="register_btn">Организация</div>
-                    <p>
-                    <div id="register_btn_num4" class="login_btn">Уже есть аккаунт? (Войти)</div>
-                    </p>
-                    <div class="register_step_two">
-                        <p><input name="name" maxlength=50 size=50 type="text" class="form-input" placeholder="Введите ФИО"></p>
-                        <p><input name="email" maxlength=20 size=20 type="text" class="form-input" placeholder="Введите почту"></p>
-                        <p><input name="phone" maxlength=11 size=11 type="text" class="form-input" placeholder="Введите телефон"></p>
-                        <p><input name="password" maxlength=20 size=20 type="text" class="form-input" placeholder="Введите пароль"></p>
-                        <p><button type="submit" class="form-btn">Зарегистрироваться</button></p>
-                        <p>
-                        <div id="register_btn_num5" class="login_btn">Уже есть аккаунт? (Войти)</div>
-                        </p>
+            <div class="profiles_box">
+                <div class="profiles_avatar"></div>
+                <div class="profiles_info">
+                    <div class="profiles_name" style="text-align: center; font-size:36px;">
+                        <?php
+                        if (!isset($_SESSION['user'])) {
+                            session_start();
+                        }
+                        echo $_SESSION['user']; ?></div>
+                    <div class="profiles_phone" style="margin-left: 60px;">
+                        <p>Ваш телефон - <?php
+                                            if (!isset($_SESSION['user'])) {
+                                                session_start();
+                                            }
+                                            echo $_SESSION['phone']; ?></p>
                     </div>
-                </div> -->
+                    <div class="profiles_email" style="margin-left: 60px;">
+                        <p>Ваша почта - <?php
+                                        if (!isset($_SESSION['user'])) {
+                                            session_start();
+                                        }
+                                        echo $_SESSION['email']; ?></p>
+                    </div>
+                    <form action="leave_user.php" style="margin-left: 60px;">
+                        <button type="submit" class="register_btn">Выйти с аккаунта</button>
+                    </form>
+                </div>
+
             </div>
 
         </div>

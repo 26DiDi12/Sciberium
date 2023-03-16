@@ -1,6 +1,6 @@
 * {
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: 'NunitoSans', sans-serif;
 
 }
@@ -657,6 +657,36 @@ body {
 
 }
 
+.profiles_box {
+
+    margin: 50px;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid #575757;
+    padding: 40px 80px;
+    display: flex;
+
+}
+.profiles_avatar {
+
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid #575757;
+    min-width: 20%;
+    height: 500px;
+
+}
+.profiles_info {
+
+    min-width: 80%;
+    height: fit-content;
+    font-size: 20px;
+    text-align: left;
+
+}
+
 /* main {
 
 
@@ -698,24 +728,6 @@ body {
 }
 .login_box.active {
 
-    opacity: 1;
-    pointer-events: auto;
-
-}
-
-.profile_box {
-    
-    box-sizing: border-box;
-    position: absolute;
-    width: 965px;
-    height: 742px;
-    left: 806px;
-    top: 196px;
-    background: rgba(255, 255, 255, 0.55);
-    border: 1px solid #575757;
-    padding: 80px 320px;
-    text-align: center;
-    transition: all 0.7s ease-in-out;
     opacity: 1;
     pointer-events: auto;
 

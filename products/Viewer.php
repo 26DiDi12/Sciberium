@@ -54,8 +54,11 @@
                 <a href="" style="color: white;">Новости</a>
             </div>
         </div>
-        <?php session_start();
-        if (isset($_SESSION['user'])) { ?>
+
+        <?php if (!isset($_SESSION['user'])) {
+            session_start();
+        }
+        if (isset($_SESSION['user'])) if ($_SESSION['user'] != 'Гость') { ?>
             <a href="/profile.php" class="avatar-btn">
                 <div class="avatar_name"><?php
                                             echo $_SESSION['user'];
@@ -65,11 +68,11 @@
         <?php } else { ?>
             <a href="/register.php" class="avatar-btn">
                 <div class="avatar_name"><?php
-                                            session_start();
                                             echo $_SESSION['user']; ?></div>
                 <img src="/img/avatar.png" alt="" height="55px">
             </a>
         <?php } ?>
+
     </div>
 
     <article class="window" id="profile_id">
