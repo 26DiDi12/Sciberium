@@ -75,16 +75,16 @@
         }
         if (isset($_SESSION['user'])) if ($_SESSION['user'] != 'Гость') { ?>
             <a href="profile.php" class="avatar-btn">
-                <div class="avatar_name"><?php
+                <div class="avatar_name"><p><?php
                                             echo $_SESSION['user'];
-                                            ?></div>
-                <img src="img/avatar.png" alt="" height="55px">
+                                            ?></p></div>
+                <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
             </a>
         <?php } else { ?>
             <a href="register.php" class="avatar-btn">
-                <div class="avatar_name"><?php
-                                            echo $_SESSION['user']; ?></div>
-                <img src="img/avatar.png" alt="" height="55px">
+                <div class="avatar_name"><p><?php
+                                            echo $_SESSION['user']; ?></p></div>
+                <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
             </a>
         <?php } ?>
 
