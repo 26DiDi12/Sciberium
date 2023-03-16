@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="css/NunitoSans.css">
     <script src="js/script.js" defer></script>
     <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="https://www.localizejs.ru/js/localization.min.js"></script>
+    <script src="https://www.localizejs.ru/js/langs.min.js"></script>
+    <script type="text/javascript">
+        LOCLANGS.fastInit("en,ru");
+    </script>
 </head>
 
 <body>
@@ -75,15 +80,19 @@
         }
         if (isset($_SESSION['user'])) if ($_SESSION['user'] != 'Гость') { ?>
             <a href="profile.php" class="avatar-btn">
-                <div class="avatar_name"><p><?php
-                                            echo $_SESSION['user'];
-                                            ?></p></div>
+                <div class="avatar_name">
+                    <p><?php
+                        echo $_SESSION['user'];
+                        ?></p>
+                </div>
                 <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
             </a>
         <?php } else { ?>
             <a href="register.php" class="avatar-btn">
-                <div class="avatar_name"><p><?php
-                                            echo $_SESSION['user']; ?></p></div>
+                <div class="avatar_name">
+                    <p><?php
+                        echo $_SESSION['user']; ?></p>
+                </div>
                 <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
             </a>
         <?php } ?>

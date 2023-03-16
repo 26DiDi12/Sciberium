@@ -120,9 +120,9 @@
         <div class="profile_info">
             <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p>
             <p class="profile_info_input"><?php echo $_SESSION['phone'] ?></p>
+            <!-- <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p>
             <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p>
-            <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p>
-            <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p>
+            <p class="profile_info_input"><?php echo $_SESSION['user'] ?></p> -->
         </div>
 
         <div class="profile_supp">
