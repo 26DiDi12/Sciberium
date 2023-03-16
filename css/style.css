@@ -39,17 +39,23 @@ body {
 
 .products_menu_num {
 
-    margin-top: 12px;
-    height: 40px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    height: 18%;
+    background-color: #21a39dad;
+    border-radius: 15px;
+    margin: 10px 10px;
 
 }
 
 .products_menu {
 
+    z-index: 50;
     opacity: 0;
     pointer-events: none;
     border-radius: 20px;
+    background-color: rgb(59, 59, 59);
     top: 69px;
     left: 830px;
     height: 200px;
@@ -60,6 +66,7 @@ body {
 
 .products_menu_box {
 
+    z-index: 100;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
@@ -699,7 +706,7 @@ body {
     background-size: cover;
     height: 900px;
     border-bottom: 22px solid #009A99;
-
+    
 }
 
 .background_items {

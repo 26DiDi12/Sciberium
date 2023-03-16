@@ -25,33 +25,50 @@
             </div>
             <div class="header_item">
                 <div class="products_menu_btn">
-                    <a href="/catalog.php" style="border-bottom: 1px solid white; color: white;">Продукты</a>
+                    <a href="/catalog.php" style="color: white; border-bottom: 1px solid white;">Продукты</a>
                     <div class="products_menu"></div>
                     <div class="products_menu_box">
-                        <div class="products_menu_num">
+                        <a href="/products/Viewer.php" class="products_menu_num">
                             <img src="" alt="">
-                            <a href="Viewer.php" style="border-bottom: 1px solid white; color: black;">Sciberia Viewer</a>
-                        </div>
-                        <div class="products_menu_num">
+                            <div style="color: black;">Sciberia Viewer</div>
+                        </a>
+                        <a href="/products/PACS.php" class="products_menu_num">
                             <img src="" alt="">
-                            <a href="PACS.php" style="color: black;">Sciberia PACS</a>
-                        </div>
-                        <div class="products_menu_num">
+                            <div style="color: black;">Sciberia PACS</div>
+                        </a>
+                        <a href="/products/Lungs.php" class="products_menu_num">
                             <img src="" alt="">
-                            <a href="Lungs.php" style="color: black;">Sciberia Lungs</a>
-                        </div>
-                        <div class="products_menu_num">
+                            <div style="color: black;">Sciberia Lungs</div>
+                        </a>
+                        <a href="/products/Head.php" class="products_menu_num">
                             <img src="" alt="">
-                            <a href="Head.php" style="color: black;">Sciberia Head</a>
-                        </div>
+                            <div style="color: black;">Sciberia Head</div>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="header_item">
-                <a href="" style="color: white;">О нас</a>
+                <a href="https://sciberia.io/AboutUs" style="color: white;">О нас</a>
             </div>
             <div class="header_item">
-                <a href="" style="color: white;">Новости</a>
+                <div class="products_menu_btn">
+                    <a href="" style="color: white;">Новости</a>
+                    <div class="products_menu" style="left: 1020px"></div>
+                    <div class="products_menu_box" style="left: 1020px">
+                        <a href="https://sciberia.io/news" class="products_menu_num" style="height: 26%;">
+                            <img src="" alt="">
+                            <div style="color: black;">All</div>
+                        </a>
+                        <a href="https://sciberia.io/news?section=mass-media" class="products_menu_num" style="height: 26%;">
+                            <img src="" alt="">
+                            <div style="color: black;">Mass Media</div>
+                        </a>
+                        <a href="https://sciberia.io/news?section=press-releases" class="products_menu_num" style="height: 26%;">
+                            <img src="" alt="">
+                            <div style="color: black;">Press release</div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
