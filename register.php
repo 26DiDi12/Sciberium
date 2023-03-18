@@ -98,8 +98,8 @@
     <div class="background" style="background-image: url('/img/background3.png');">
         <div class="background_items_second">
             <div class="register_zone">
-                <form class="register_box">
-                <!-- <form action="sign_user.php" class="register_box" method="POST"> -->
+                <!-- <form class="register_box"> -->
+                <form action="sign_user.php" class="register_box" method="POST">
                     <p id="register-title" style="font-size: 32px;">Регистрация</p>
                     <div style="margin-top: 120px;">
                         <div id="register_btn_num1" class="register_btn">Пользователь</div>
@@ -109,12 +109,12 @@
                         <div id="register_btn_num4" class="login_btn">Уже есть аккаунт? (Войти)</div>
                         </p>
                         <div class="register_step_two">
-                            <p><input name="name" maxlength=50 size=50 type="text" class="form-input" placeholder="Введите ФИО"></p>
-                            <p><input name="email" maxlength=20 size=20 type="text" class="form-input" id="email" placeholder="Введите почту"></p>
-                            <p><input name="phone" maxlength=11 size=11 type="text" class="form-input" placeholder="Введите телефон"></p>
-                            <p><input name="password" maxlength=20 size=20 type="text" class="form-input" placeholder="Введите пароль"></p>
-                            <div class="register_warn" id="result">asd</div>
-                            <p><button type="submit" id='validate' class="form-btn">Зарегистрироваться</button></p>
+                            <p><input name="name" maxlength=50 size=50 type="text" class="form-input" id="register_name" placeholder="Введите имя"></p>
+                            <p><input name="email" maxlength=20 size=20 type="text" class="form-input" id="register_email" placeholder="Введите почту"></p>
+                            <p><input name="phone" maxlength=10 size=10 type="text" class="form-input" id="register_phone" placeholder="Введите телефон"></p>
+                            <p><input name="password" maxlength=20 size=20 type="text" class="form-input" id="register_pass" placeholder="Введите пароль"></p>
+                            <div class="register_warn" id="register_result"></div>
+                            <p><button type="submit" id='register_validate' class="form-btn">Зарегистрироваться</button></p>
                             <p><div id="register_btn_num5" class="login_btn">Уже есть аккаунт? (Войти)</div></p>
                         </div>
                     </div>

@@ -1,26 +1,47 @@
+function register_validate() {
 
-function validateEmail(email) {
-    var pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return pattern.test(email);
-}
-
-function validate() {
-    var $result = $("#result");
-    var email = $("#email").val();
-    console.log($result.text());
+    var $result = $("#register_result");
+    var email_pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var phone_pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    var name = document.getElementById('register_name');
+    var email = document.getElementById('register_email');
+    var phone = document.getElementById('register_phone');
+    var pass = document.getElementById('register_pass');
     $result.text("");
 
-    if (validateEmail(email)) {
-        console.log(email + " подтвержден.");
-        $result.text(email + " подтвержден.");
+    if (name.value == '') {
+        $result.text("Введите имя");
+        return false;
     } else {
-        console.log(email + " не подтвержден.");
-        $result.text(email + " не подтвержден.");
+        $result.text('');
     }
-    return false;
+
+    if (email.value.match(email_pattern)) {
+        $result.text('');
+    }
+    else {
+        $result.text("Введите корректный адрес почты");
+        return false;
+    }
+
+    if (phone.value.match(phone_pattern)) {
+        $result.text('');
+    }
+    else {
+        $result.text("Введите корректный номер телефона");
+        return false;
+    }
+
+    if (pass.value == '') {
+        $result.text("Введите пароль");
+        return false;
+    } else {
+        $result.text('');
+    }
+
 }
 
-$("#validate").bind("click", validate);
+$("#register_validate").bind("click", register_validate);
 
 document.getElementById('login_btn_num6').addEventListener('click', function () {
     if (document.querySelector('.register_box').classList[1] == 'hell') {

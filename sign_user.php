@@ -31,21 +31,25 @@ if ($_POST['name'] == '') {
 			$_SESSION['user'] = 'Гость';
 			require_once('register.php');
 		} else {
-			$sql = "INSERT INTO  `users` (`password`, `email`, `name`, `phone`) VALUES (:password, :email, :name, :phone);";
+			$sql = "INSERT INTO  `users` (`name`, `email`, `phone`, `city`, `prof`, `password`) VALUES (:name, :email, :phone, :city, :prof, :password);";
 			$stmt = $conn->prepare($sql);
-			$stmt->bindValue(":password", $_POST['password']);
-			$stmt->bindValue(":email", $_POST["email"]);
 			$stmt->bindValue(":name", $_POST['name']);
+			$stmt->bindValue(":email", $_POST["email"]);
 			$stmt->bindValue(":phone", $_POST['phone']);
+			$stmt->bindValue(":city", $_POST['city']);
+			$stmt->bindValue(":prof", $_POST['prof']);
+			$stmt->bindValue(":password", $_POST['password']);
 			$stmt->execute();
 			// echo '<meta charset="UTF-8">Регистрация успешна!';
 			if (!isset($_SESSION)) {
 				session_start();
 			}
 			$_SESSION['user'] = $_POST["name"];
-			$_SESSION['pass'] = $_POST["password"];
 			$_SESSION['email'] = $_POST["email"];
 			$_SESSION['phone'] = $_POST["phone"];
+			$_SESSION['city'] = $_POST["city"];
+			$_SESSION['prof'] = $_POST["prof"];
+			$_SESSION['pass'] = $_POST["password"];
 			require_once('index.php');
 		}
 	} catch (PDOException $e) {

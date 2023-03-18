@@ -15,8 +15,10 @@
     	}
 		$_SESSION['user'] = $stmt['0']['name'];
 		$_SESSION['email'] = $stmt['0']['email'];
-		$_SESSION['pass'] = $stmt['0']['password'];
 		$_SESSION['phone'] = $stmt['0']['phone'];
+		$_SESSION['city'] = $stmt['0']['city'];
+		$_SESSION['prof'] = $stmt['0']['prof'];
+		$_SESSION['pass'] = $stmt['0']['password'];
 		// echo '<meta charset="UTF-8">Вы успешно авторизовались!'; 
 		require_once('index.php');
 	} else { 
