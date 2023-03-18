@@ -43,7 +43,7 @@ body {
     align-items: center;
     padding-left: 10px;
     height: 18%;
-    background-color: #21a39dad;
+    background-color: #009A99;
     border-radius: 15px;
     margin: 10px 10px;
 
@@ -56,11 +56,10 @@ body {
     pointer-events: none;
     border-radius: 20px;
     background-color: rgb(59, 59, 59);
-    top: 69px;
-    left: 800px;
+    margin-left: -60px;
     height: 200px;
     width: 200px;
-    position: absolute;
+    position:fixed;
 
 }
 
@@ -72,11 +71,11 @@ body {
     pointer-events: none;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    top: 85px;
-    left: 800px;
+    margin-top: 15px;
+    margin-left: -60px;
     height: 200px;
     width: 200px;
-    position: absolute;
+    position: fixed;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
 
 }
@@ -144,6 +143,12 @@ body {
     padding: 20px 20px;
 
     transition: 0.5s ease-in-out;
+
+}
+
+.ninja_panel_text {
+
+    color: white;
 
 }
 
@@ -389,6 +394,7 @@ body {
 
 .avatar-btn {
 
+    position: fixed;
     min-width: 161px;
     max-width: 161px;
     text-decoration: none;
@@ -396,6 +402,7 @@ body {
     display: flex;
     color: white;
     align-items: center;
+    margin-left: -100px;
 
 }
 
@@ -421,7 +428,8 @@ body {
 
 .header_items {
 
-    min-width: 350px;
+    position: absolute;
+    left: 40%;
     color: white;
     display: flex;
     flex-direction: row;

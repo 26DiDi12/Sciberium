@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+} ?>
 <html lang="en">
 
 <head>
@@ -19,7 +23,20 @@
         <a href="index.php" class="header_logo">Sciberium</a>
         <div class="header_items">
             <div class="header_item">
-                <a href="" style="color: white;">Язык</a>
+                <div class="products_menu_btn">
+                    <a href="https://sciberia.io/AboutUs" style="color: white;">Язык</a>
+                    <div class="products_menu" style="margin-left: -75px;"></div>
+                    <div class="products_menu_box" style="margin-left: -75px;">
+                        <a href="https://sciberia.io/news" class="products_menu_num" style="height: 43%;">
+                            <img src="" alt="">
+                            <div class="ninja_panel_text">Русский</div>
+                        </a>
+                        <a href="https://sciberia.io/news?section=mass-media" class="products_menu_num" style="height: 43%;">
+                            <img src="" alt="">
+                            <div class="ninja_panel_text">Английский</div>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="header_item">
                 <div class="products_menu_btn">
@@ -28,68 +45,79 @@
                     <div class="products_menu_box">
                         <a href="products/Viewer.php" class="products_menu_num">
                             <img src="" alt="">
-                            <div style="color: black;">Sciberia Viewer</div>
+                            <div class="ninja_panel_text">Sciberia Viewer</div>
                         </a>
                         <a href="products/PACS.php" class="products_menu_num">
                             <img src="" alt="">
-                            <div style="color: black;">Sciberia PACS</div>
+                            <div class="ninja_panel_text">Sciberia PACS</div>
                         </a>
                         <a href="products/Lungs.php" class="products_menu_num">
                             <img src="" alt="">
-                            <div style="color: black;">Sciberia Lungs</div>
+                            <div class="ninja_panel_text">Sciberia Lungs</div>
                         </a>
                         <a href="products/Head.php" class="products_menu_num">
                             <img src="" alt="">
-                            <div style="color: black;">Sciberia Head</div>
+                            <div class="ninja_panel_text">Sciberia Head</div>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="header_item">
-                <a href="https://sciberia.io/AboutUs" style="color: white;">О нас</a>
+                <div class="products_menu_btn">
+                    <a href="https://sciberia.io/AboutUs" style="color: white;">О нас</a>
+                    <div class="products_menu" style="margin-left: -75px;"></div>
+                    <div class="products_menu_box" style="margin-left: -75px;">
+                        <a href="https://sciberia.io/news" class="products_menu_num" style="height: 26%;">
+                            <img src="" alt="">
+                            <div class="ninja_panel_text">All</div>
+                        </a>
+                        <a href="https://sciberia.io/news?section=mass-media" class="products_menu_num" style="height: 26%;">
+                            <img src="" alt="">
+                            <div class="ninja_panel_text">Mass Media</div>
+                        </a>
+                        <a href="https://sciberia.io/news?section=press-releases" class="products_menu_num" style="height: 26%;">
+                            <img src="" alt="">
+                            <div class="ninja_panel_text">Press release</div>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="header_item">
                 <div class="products_menu_btn">
                     <a href="" style="color: white;">Новости</a>
-                    <div class="products_menu" style="left: 990px"></div>
-                    <div class="products_menu_box" style="left: 990px">
+                    <div class="products_menu" style="margin-left: -65px;"></div>
+                    <div class="products_menu_box" style="margin-left: -65px;">
                         <a href="https://sciberia.io/news" class="products_menu_num" style="height: 26%;">
                             <img src="" alt="">
-                            <div style="color: black;">All</div>
+                            <div class="ninja_panel_text">All</div>
                         </a>
                         <a href="https://sciberia.io/news?section=mass-media" class="products_menu_num" style="height: 26%;">
                             <img src="" alt="">
-                            <div style="color: black;">Mass Media</div>
+                            <div class="ninja_panel_text">Mass Media</div>
                         </a>
                         <a href="https://sciberia.io/news?section=press-releases" class="products_menu_num" style="height: 26%;">
                             <img src="" alt="">
-                            <div style="color: black;">Press release</div>
+                            <div class="ninja_panel_text">Press release</div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <?php if (!isset($_SESSION['user'])) {
-            session_start();
-        }
-        if (isset($_SESSION['user'])) if ($_SESSION['user'] != 'Гость') { ?>
+        <?php if (isset($_SESSION['user'])) if ($_SESSION['user'] != 'Гость') { ?>
             <a href="profile.php" class="avatar-btn">
                 <div class="avatar_name">
-                    <p><?php
-                        echo $_SESSION['user'];
-                        ?></p>
+                    <p><?php echo $_SESSION['user']; ?></p>
                 </div>
                 <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
-            </a>
                 <form action="leave_user.php" style="position: absolute; top: 10px; left: 1812px;" method="POST">
                     <button type="submit">Выйти</button>
                 </form>
+            </a>
         <?php } else { ?>
             <a href="register.php" class="avatar-btn">
                 <div class="avatar_name">
-                    <p><?php
-                        echo $_SESSION['user']; ?></p>
+                    <p><?php echo $_SESSION['user']; ?></p>
                 </div>
                 <img class="avatar_img" src="img/avatar.png" alt="" height="55px">
             </a>
