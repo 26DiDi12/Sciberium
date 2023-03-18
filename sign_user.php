@@ -12,6 +12,10 @@ if ($_POST['name'] == '') {
 	$_SESSION['user'] = 'Гость';
 	require_once('register.php');
 } else {
+	
+	// if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+	// 	$emailErr = "Invalid email format";
+	// }
 	// var_dump($_POST['name']);
 	try {
 		$conn = new PDO("mysql:host=localhost;dbname=mysql", "root", "");

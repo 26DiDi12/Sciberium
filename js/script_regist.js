@@ -1,5 +1,29 @@
+
+function validateEmail(email) {
+    var pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return pattern.test(email);
+}
+
+function validate() {
+    var $result = $("#result");
+    var email = $("#email").val();
+    console.log($result.text());
+    $result.text("");
+
+    if (validateEmail(email)) {
+        console.log(email + " подтвержден.");
+        $result.text(email + " подтвержден.");
+    } else {
+        console.log(email + " не подтвержден.");
+        $result.text(email + " не подтвержден.");
+    }
+    return false;
+}
+
+$("#validate").bind("click", validate);
+
 document.getElementById('login_btn_num6').addEventListener('click', function () {
-    if(document.querySelector('.register_box').classList[1] == 'hell') {
+    if (document.querySelector('.register_box').classList[1] == 'hell') {
         console.log(document.querySelector('.register_box').classList[1]);
         document.getElementById('register_btn_num1').classList.remove('active');
         document.getElementById('register_btn_num2').classList.remove('active');
